@@ -1,0 +1,46 @@
+
+<script type="text/javascript" src='/js/play.js'> </script>
+<% if session[:admin] %>
+	<div class='container-fluid admin-controls'>
+		<h2 id='headline'>Admin Controls</h2>
+		<a href="/<%= @tape.id %>/edit">Edit Tape</a>
+	</div>
+<% end %>
+<div class='container-fluid show-tape' style='background-image:url("/pics/album_art/<%= @tape.tape_name.downcase.split(" ").join("_") %>.jpg");background-size: 100%;background-position: center center;background-repeat: no-repeat;'> 
+<div class='col-xs-12 col-sm-12 col-md-4 player'>
+	<div class='contianer-fluid mp3'>
+	<p id='artist'><%= @tape.artist %></p>
+	<p id='tape_name'><%= @tape.tape_name %></p>
+		
+
+	<div class='mp3-controls'>
+		<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+	</div>
+	<div class='mp3-slider'>
+		<span id='time'>00:00</span>
+		<div class='played'></div>
+		
+	</div>
+	<ul>
+	<% @tape.songs.each do |song| %>
+		<li><span source="/albums/<%= @tape.tape_name.downcase.split(" ").join("_") %>/<%= song.song_name.downcase.split(" ").reject{|e| e=="/" }.join("_")%>.mp3" id='track_number'><%= song.track_number.to_s.rjust(2,"0") %></span>  <%= song.song_name %></li>
+		
+	<% end %>
+	</ul>
+	</div>
+	<% unless @tape.spotify_url == "" %>
+		<a id='spotify' href="<%= @tape.spotify_url %>"><img src='pics/icons/spotify.jpg'> Listen on Spotify</a>
+	<% end %>
+
+	<% unless @tape.soundcloud_url == "" %>
+		<a id='soundcloud' href="<%= @tape.soundcloud_url %>"><img src='pics/icons/soundcloud.jpg'> Listen on SoundCloud</a>
+	<% end %>
+</div>
+<div class='col-xs-12 col-sm-12 col-md-8 info'>
+	<p id='tape_name'><%= @tape.tape_name %></p>
+	<p id='artist'><%= @tape.artist %></p>
+	<p id='description'><%= @tape.tape_description %></p>
+</div>
+</div>

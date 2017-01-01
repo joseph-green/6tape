@@ -1,0 +1,33 @@
+<script src="../js/new_tape.js"> </script>
+
+<div class='padding col-sm-2 col-md-3'></div>
+<form class='admin-form col-xs-12 col-sm-9 col-md-6' method='POST' action='/<%= @tape.id %>/edit'>
+	<h2 id='headline'>Edit <%= @tape.tape_name %></h2>
+	<p id='form-label'>Name</p>
+	<input type='text' id='long-input' name='tape_name' value='<%= @tape.tape_name %>'>
+	<p id='form-label'>Artist</p>
+	<input type='text' id='long-input' name='artist' value='<%= @tape.artist %>'>
+	<p id='form-label'>Spotify Link</p>
+	<input type='text' id='long-input' name='spotify_url' value='<%= @tape.spotify_url if @tape.spotify_url %>'>
+	<p id='form-label'>SoundCloud Link</p>
+	<input type='text' id='long-input' name='soundcloud_url' value='<%= @tape.soundcloud_url if @tape.soundcloud_url %>'>
+
+	<p id='form-label'>Release Date</p>
+	<input type='text' placeholder='YYYY' size="4" name='release_year' value='<%= @tape.release_date.year if @tape.release_date %>'><span>/</span><input type='text' placeholder='MM' size="2" name='release_month' value='<%= @tape.release_date.month if @tape.release_date %>'><span>/</span><input type='text' placeholder='DD' size="2" name='release_day' value='<%= @tape.release_date.day if @tape.release_date %>'>
+	
+	<div class='songs'>
+		<p id='headline'>Add Songs</p>
+		<% @tape.songs.each do |song| %>
+			<span><%= song.track_number.rjust(2,"0") %> | <input type='text' id='long-input' placeholder="Name" name='songs[]' value="<%= song.song_name %>"></span>
+		<% end %>
+		
+	</div>
+	<a id='newsong'>+ Add Song</a>
+	<a id='minussong'>- Remove Song</a>
+	<p id='form-label'>Tape Description</p>
+	<textarea name='tape_description'><%= @tape.tape_description %></textarea>
+
+	
+
+	<input type='submit'>
+</form>

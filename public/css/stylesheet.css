@@ -1,0 +1,259 @@
+.header {
+	
+	background-color: #fff;
+	text-align: center;
+	
+}
+.header img {
+	height: 3em;
+	margin: 1em auto;
+}
+.header p {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.container-fluid, .col-md-4 {
+	padding: 0;
+}
+.content {
+	background-color: #111;
+	min-height: 30vh;
+	padding: 0;
+
+}
+
+#headline, #form-label {
+	font-size: 0.9em;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Open Sans';
+	font-weight: 300;
+}
+
+#form-label {
+	font-size: 0.7em;
+}
+form {
+	margin: 2em 0;
+}
+input[type*=text], input[type*=password], input[type*=submit], textarea  {
+	background-color: #111;
+	border: none;
+	border-bottom: 1px solid #fff;
+	border-radius: 0.05em;
+	padding: 0.3em 0.7em;
+	margin-bottom: 2em;
+	color: #fff;
+	font-family: 'Open Sans';
+
+
+}
+input[type*=text]:focus, input[type*=password]:focus, input[type*=submit]:focus, textarea:focus {
+	outline: none;
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+}
+textarea {
+	width: 100%;
+	height: 30vh;
+	border: 1px solid #fff;
+	border-radius: 0.3em
+}
+textarea:focus {
+	border: 2px solid #fff;
+	font-weight: normal;
+}
+input[type*=submit], .admin-controls a {
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #000;
+	display: block;
+	background-color: #fff;
+	font-weight: bold;
+}
+#long-input {
+	width: 75%;
+}
+.mp3-controls {
+	text-align: center;
+	padding: 2em ;
+}
+
+.mp3-controls .glyphicon {
+	font-size: 3em;
+	color: #fff;
+	margin: 0 0.1em;
+}
+.mp3-controls .glyphicon-step-backward, .mp3-controls .glyphicon-step-forward {
+	color: rgba(255,255,255,0.7);
+	font-size: 1.5em;
+	display: inline-block;
+	padding-bottom: 0.5em;
+
+}
+#time {
+	color: #0000ff;
+}
+.played {
+	
+	height: 3px;
+	display: block;
+}
+.played {
+	width: 0%;
+	background-color: #0000ff;
+}
+
+.tape img {
+	width: 100%;
+	display: block;
+	margin: 0;
+	
+}
+.player, .info {
+	background-color: rgba(0,0,0,0.8);
+	min-height: 100vh;
+	padding: 2em 0;
+}
+.player {
+	padding-left: 3vw;
+}
+.player img {
+	display: block;
+	height: 20vw;
+	width: 20vw;
+	margin: 2em auto;
+
+}
+.player a {
+	
+	text-align: center;
+	display: inline;
+
+}
+#soundcloud img, #spotify img {
+	height: 1em;
+	width: 1em;
+	display: inline;
+
+}
+#soundcloud, #spotify {
+	color: #fff;
+
+	border-radius: 0.2em;
+	padding: 0.5em 1em;
+
+}
+#soundcloud:hover, #spotify:hover {
+	text-decoration: none;
+}
+#soundcloud {
+	background-color: #FC5C1F;
+}
+#spotify {
+	background-color: #1A1414;
+}
+.player #tape_name {
+	font-size: 3em;
+	color: #fff;
+	margin: 0;
+	font-family: 'Questrial';
+	
+}
+.player #artist {
+	font-size: 1.3em;
+	color: rgba(255,255,255,0.7);
+	margin: 0;
+	font-weight: 300;
+
+}
+.player ul {
+	list-style: none;
+	padding: 0;
+}
+.player li {
+	margin: 0.3em 0;
+	
+	text-align: left;
+	color: #fff;
+	font-size: 1.3em;
+	font-family: 'Questrial';
+	font-weight: 300;
+}
+.player .line {
+	width: 40%;
+	background-color: rgba(255,255,255,0.4);
+	height: 1px;
+	margin: 0 auto;
+}
+.player #track_number {
+	font-size: 0.8em;
+	color: rgba(255,255,255,0.5);
+}
+
+.info {
+	text-align: center;
+}
+.info #tape_name {
+	font-size: 6em;
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 0.5em;
+	color: #fff;
+}
+.info #artist {
+	font-size: 2.5em;
+	color: rgba(255,255,255,0.7);
+}
+.info #description {
+	font-size: 1.5em;
+	margin: 3em 2em;
+	font-family: serif;
+}
+.songs {
+	margin: 2em auto;
+}
+.songs p {
+	font-size: 3em;
+}
+.songs span {
+	display: block;
+}
+#newsong, #minussong {
+	display: inline-block;
+	color: #111;
+	margin: 0 0 3em;
+	background-color: #fff;
+	border-radius: 0.1em;
+	font-weight: bold;
+	padding: 0.5em 1em;
+}
+.footer {
+	padding-top: 1em;
+	background-color: #111;
+	text-align: center;
+}
+.footer img {
+	height: 2em;
+	margin: 0.5em auto;
+}
+.footer ul {
+	margin: 1em 0;
+}
+.footer li {
+	font-size: 0.9em;
+	display: inline;
+	margin: 1em;
+}
+.footer a {
+	color: white;
+}
+.admin-controls {
+	padding: 1em;
+}
+.admin-controls a {
+	display: inline-block;
+	padding: 0.5em 1em;
+	border-radius: 0.2em;
+}

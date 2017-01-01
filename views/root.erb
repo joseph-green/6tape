@@ -1,0 +1,8 @@
+<div class='tapes'>
+	
+	<% @tapes.each do |tape| %>
+		<div class='col-xs-12 col-sm-6 col-md-4 tape'>
+			<a href="/<%= tape.id %>"><img src="/pics/album_art/<%= tape.tape_name.downcase.split(" ").join("_") %>.jpg"></a>
+		</div>
+	<% end %>
+</div>

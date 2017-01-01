@@ -1,0 +1,31 @@
+<script src="/js/new_tape.js"> </script>
+
+
+<div class='padding col-sm-2 col-md-3'></div>
+<form class='admin-form col-xs-12 col-sm-9 col-md-6' method='POST' action='/new'>
+	<h2 id='headline'>Create new tape</h2>
+	<p id='form-label'>Name</p>
+	<input type='text' id='long-input' name='tape_name'>
+	<p id='form-label'>Artist</p>
+	<input type='text' id='long-input' name='artist'>
+	<p id='form-label'>Spotify Link</p>
+	<input type='text' id='long-input' name='spotify_url'>
+	<p id='form-label'>SoundCloud Link</p>
+	<input type='text' id='long-input' name='soundcloud_url'>
+	<p id='form-label'>Release Date</p>
+	<input type='text' placeholder='YYYY' size="4" name='release_year'><span>/</span><input type='text' placeholder='MM' size="2" name='release_month'><span>/</span><input type='text' placeholder='DD' size="2" name='release_day'>
+	
+	<div class='songs'>
+		<p id='headline'>Add Songs</p>
+		<span>1 | <input type='text' id='long-input' placeholder="Name" name='songs[]'></span>
+		
+	</div>
+	<a id='newsong'>+ Add Song</a>
+	<a id='minussong'>- Remove Song</a>
+	<p id='form-label'>Tape Description</p>
+	<textarea name='tape_description'></textarea>
+
+	
+
+	<input type='submit'>
+</form>
